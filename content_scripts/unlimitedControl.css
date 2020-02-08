@@ -1,0 +1,70 @@
+.unlimited-controls {
+  padding: 10px 10px 14px;
+  background: #283e4a;
+  float: right;
+  border-top: 3px dashed #495dc4;
+  border-radius: 0 0 5px 5px;
+  opacity: 1;
+  transition: opacity 1000ms;
+  position: relative;
+}
+
+.unlimited-controls.minimized {
+  height: 0;
+  overflow: hidden;
+  padding: 14px 10px 0;
+}
+
+.unlimited-controls > .unlimited-controls__toggler {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  cursor: pointer;
+  width: 66px;
+  height: 14px;
+  transform: translateX(-50%);
+  padding: 7px 10px;
+}
+
+.unlimited-controls > .unlimited-controls__toggler::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 44px;
+  height: 4px;
+  background: #6e85ff;
+  transform: translate(-50%, -50%);
+}
+
+.unlimited-controls > .unlimited-controls--loaded {
+  opacity: 1;
+}
+
+.unlimited-controls > .unlimited-controls__button {
+  margin: 3px;
+  color: #fff;
+  background: #495dc4;
+  transition: background-color 300ms;
+}
+
+.unlimited-controls > .unlimited-controls__button:hover {
+  background-color: #6175d8;
+  color: #fff;
+}
+
+.unlimited-controls > .unlimited-controls__input {
+  width: 70px;
+  font-size: 16px;
+  border: 0px solid #495dc4;
+  padding: 5px;
+  font-weight: bold;
+  color: #495dc4;
+  background: #fff;
+}
+
+.hide-origin-results .search-results__list,
+.hide-origin-results .artdeco-pagination,
+.hide-origin-results .search-results__total {
+  display: none;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+
+  <body>
+    <div id="popup-content">
+      <div class="settings">
+        <h3 class="settings__header">Settings</h3>
+        <form action="#!" class="settings__form">
+          <div class="settings__block">
+            <label for="profilesPerPage" class="settings__label">
+              <p class="settings__description">How many profiles to show per page?</p>
+              <input id="profilesPerPage" class="profiles-per-page" type="number" min="1" max="49" value="10" />
+              <span class="settings__hint">(min: 1, max: 49)</span>
+            </label>
+          </div>
+
+          <div class="settings__block">
+            <label class="settings__label" for="connectingFollow">
+              <p class="settings__description">Send connect invite instead of `Follow`</p>
+              <input id="connectingFollow" type="checkbox" checked hidden />
+              <span class="settings__checkbox"></span>
+              <span class="settings__hint">(checked = enabled)</span>
+            </label>
+          </div>
+
+          <button class="settings__submit" type="submit">Apply Settings</button>
+          <span class="settings__confirm">&#x2713;</span>
+        </form>
+      </div>
+    </div>
+    <div id="error-content" class="hidden">
+      <p class="error-text">LinkedIn-Unlimited works only on <a src="linkedin.com" class="link">LinkedIn website</a></p>
+      <p id="more-error"></p>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
